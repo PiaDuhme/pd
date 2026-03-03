@@ -1,15 +1,164 @@
 <!DOCTYPE HTML>
 <html>
-  <header>
+  <head>
     <title>Pia's Playground</title>
     <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
-  </header>
+  </head>
   <body>
-    <h1>Hey!</h1>
-    <p>Juhu Lisa guck mal was es tolles gibt!</p>
-
-    <section id="artwork">
-      <div></div>
+    <section id="personal">
+      <img src="./resources/images/small/profile_small.jpg">
+      <div class="info">
+        <h1>Pia Duhme</h1>
+        <p>
+          Jahrgang 1998<br>
+          Deutschland, NRW<br>
+          pia.duhme@study.hs-duesseldorf.de<br>
+        </p>
+        <p>
+          Hey, ich bin Pia und interessiere mich für Webentwicklung, 
+          momentan bin ich noch "in Ausbildung" und auf der suche 
+          nach einem Praxissemester für mein Studium.
+        </p>
+      </div>
+    </section>
+    <section id="cv">
+      <div id="school" class="topic">
+        <div class="cover">
+          <h1>Bildungsweg</h1>
+        </div>
+        <section>
+          <div class="item">
+            <p class="time"><span>Grundschule</span>2004-2008</p>
+            <p class="description">Rudolf  Bracht Grundschule <br>Mastholte</p>
+          </div>
+          <div class="item">
+            <p class="time"><span>Realschule</span>2008-2014</p>
+            <p class="description">Städtische Realschule<br>Rietberg</p>
+          </div>
+          <div class="item">
+            <p class="time"><span>Fachabitur</span>2014-2016</p>
+            <p class="description">INI Berufskolleg <br> Fachabitur für Gestaltung</p>
+          </div>
+        </section>
+      </div>
+      <div id="work" class="topic">
+        <div class="cover">
+          <h1>Berufserfahrung</h1>
+        </div>
+        <section>
+          <div class="item">
+            <p class="time"><span>Ausbildung Mediendesign</span>20017-2019</p>
+            <p class="description">Bib International College <br>Paderborn</p>
+          </div>
+          <div class="item">
+            <p class="time"><span>Medieninformatik</span>seit 2019</p>
+            <p class="description">Bachelor<br>Hochschule Düsseldorf<br>Düsseldorf</p>
+          </div>
+          <div class="item">
+            <p class="time"><span>Mirevi</span>2019-2020</p>
+            <p class="description">Studentische Hilfskraft<br> Mediendesign <br> Webentwicklung</p>
+          </div>
+          <div class="item">
+            <p class="time"><span>Planwerk6</span>2023</p>
+            <p class="description">Praktikum Webentwicklung
+              <br>Erstellung von Webseiten mit:
+              <br> HTML, SCSS, Javascript, Drupal
+              <br>6 Monate
+            </p>
+          </div>
+          <div class="item">
+            <p class="time"><span>Gaststätte Wöstemeier</span>2019-2025</p>
+            <p class="description">Service<br> Teamarbeit <br> Problemlösung (langfristig/schnell)</p>
+          </div>
+        </section>
+      </div>
+      <div id="cases" class="topic">
+        <div class="cover">
+          <h1>Projekte</h1>
+        </div>
+        <section>
+          <div class="project item">
+            <p class="time"><span>Queeres<br>Teppichkino</span>2025</p>
+            <iframe src="https://queeres-teppichkino.com/"></iframe>
+            <div class="description">
+              <p>HSD Projekt<br>Webseite für das Queere Teppich Kino der HSD</p>
+              <p class="tech">Nur Umsetzung mit: <br>Strapi, React, Typescript, SCSS</p>
+            </div>
+          </div>
+          <div class="project item">
+            <p class="time"><span>Baumaschinen<br>Vermietung Sudahl</span>2019</p>
+            <iframe src="https://baumaschinen-vermietung-sudahl.de/"></iframe>
+            <div class="description">
+              <p>Bib Int. College Projekt<br>Webseite für Baumaschinen Vermietung Sudahl</p>
+              <p class="tech">Wordpress</p>
+            </div>
+          </div>
+          <div class="project item">
+            <p class="time"><span>Planwerk 6<br>Projekte im Rahmen des Praktikums</span>2023</p>
+            <ul>
+              <li><a href="https://www.castenow.de/" target="_blank">CASTENOW</a><p>Relaunch: Nur Farb und Layout anpassungen</p></li>
+              <li>
+                <div class="link-group">
+                  <a href="https://www.schmidtkord.de/" target="_blank">Schmidtkord</a>
+                  <a href="https://www.lbarchitekten.de/" target="_blank">Lücker Beckmann Architekten</a>
+                </div>
+                <p>Neu aufsetzung mit Drupal, HTML, TWIG (PHP), JQuery, Javascript, Scss </p>
+              </li>
+              <li>
+                <a href="https://www.herrlindemann.de/" target="_blank">Herr Lindemann</a>
+                <p>Neu aufsetzung mit Wordpress Theme (ohne CMS)</p>
+              </li>
+            </ul>
+            <div class="description">
+              <p></p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div id="hobby" class="topic">
+        <div class="cover">
+          <h1>Freizeit</h1>
+        </div>
+        <section>
+          <div class="freetime item">
+            <p class="time"><span>Handball</span>seit ca 2003</p>
+            <div class="description">
+              <p>Positionen: Außen, Halb, Mitte</p>
+            </div>
+          </div>
+          <div class="freetime item">
+            <p class="time"><span>Fotografie</span>seit ca 2014</p>
+            <div class="description">
+              <p>People, Street, Travel, Sport</p>
+            </div>
+            <div id="images">
+                <img class="landscape" src="./resources/images/small/2L5A0816.JPG">
+                <img class="portrait" src="./resources/images/small/2L5A0936.JPG">
+                <img class="portrait" src="./resources/images/small/2L5A2089.JPG">
+                <img class="portrait" src="./resources/images/small/2L5A2461.JPG">
+                <img class="portrait" src="./resources/images/small/2L5A2495.jpg">
+                <img class="portrait" src="./resources/images/small/2L5A2521.jpg">
+                <img class="portrait" src="./resources/images/small/2L5A2718.jpg">
+                <img class="portrait" src="./resources/images/small/2L5A3267.jpg">
+                <img class="portrait" src="./resources/images/small/2L5A3634.jpg">
+                <img class="portrait" src="./resources/images/small/2L5A4290.jpg">
+                <img class="portrait" src="./resources/images/small/2L5A4384.jpg">
+                <img class="portrait" src="./resources/images/small/2L5A4396.jpg">
+                <img class="portrait" src="./resources/images/small/2L5A4398.jpg">
+                <img class="portrait" src="./resources/images/small/2L5A5238.JPG">
+                <img class="portrait" src="./resources/images/small/_L5A1557.jpg">
+                <img class="portrait" src="./resources/images/small/_L5A1576.jpg">
+                <img class="portrait" src="./resources/images/small/_L5A1586.jpg">
+                <img class="portrait" src="./resources/images/small/_L5A1591.jpg">
+                <img class="portrait" src="./resources/images/small/_L5A1642.jpg">
+                <img class="portrait" src="./resources/images/small/_L5A1857.jpg">
+                <img class="portrait" src="./resources/images/small/_MG_0074.JPG">
+                <img class="portrait" src="./resources/images/small/_MG_0090.JPG">
+              </div>
+          </div>
+          
+        </section>
+      </div>
     </section>
   </body>
 </html>

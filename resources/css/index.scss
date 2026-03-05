@@ -3,9 +3,21 @@
 
 //start content below
 
+//Color palate
+:root {
+    --test: #983493;
+}
+
+$main-background-color: #0f0f0f;
+$background-color1: #023535;
+$background-color2: #015958;
+$background-color3: #008F8C;
+$background-color4: #009e9b;
+$background-color5: #01bcb9;
+$main-color: #C7FFED;
+$secondary-color: #015958;
+
 *, html, body {
-    //color:darkcyan;
-    color: #fefefe;
     box-sizing: border-box;
     margin: 0;
     font-size: 16px;
@@ -20,13 +32,16 @@ body {
 }
 
 h1 {
+    color: $main-color;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 700;
 }
 
 p {
+    color: $main-color;
     font-size: 1rem;
     font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+    white-space: wrap;
 }
 
 li {
@@ -42,19 +57,35 @@ li {
     }
 }
 
+#hobby {
+    background-color: $background-color5;
+    color: $main-color;
+}
+
+#personal {
+    background-color: $main-background-color;
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        margin-bottom: 1rem;
+    }
+}
+
 #school {
-    background-color: #002d34;
-    color: #c9f0f4;
+    background-color: $background-color1;
+    color: $main-color;
 }
 
 #work {
-    background-color: #590101;
-    color: #f4e9c9;
+    background-color: $background-color2;
+    color: $main-color;
 }
 
 #cases {
-    background-color: #014109;
-    color: #cef4c9;
+    background-color: $background-color3;
+    color: $main-color;
 
     .project {
 
@@ -64,6 +95,7 @@ li {
             p {
                 margin-top: 0.2rem;
                 margin-left: 0.8rem;
+                white-space: wrap;
             }
 
             li {
@@ -77,10 +109,14 @@ li {
 
                 a {
                     display: block;
-                    color: #cef4c9;
+                    color: $main-color;
                     text-decoration: none;
                     font-size: 1.3rem;
                     margin-top: -0.7rem;
+
+                    &.no-wrap {
+                        white-space: nowrap;
+                    }
 
                     &::after {
                         content:'\290D';
@@ -91,7 +127,7 @@ li {
                     }
 
                     &:hover {
-                        color:#03a719;
+                        color:$secondary-color;
                     }
                 }
             }              
@@ -99,184 +135,107 @@ li {
     }
 }
 
-#hobby {
-    background-color: #8d4c01;
-    color:#f7dfc3;
-}
 
-#personal {
-    background-color: #121111;
-    h1 {
-        font-size: 2rem;
-    }
-}
 
 
 
 
 @media only screen and (min-width: 1000px){
-#personal {
-    width: 20vw;
-    height: 100vh;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    
-    img {
-        width: 60%;
+    html, body {
+        font-size: 16px;
     }
-}
-
-#cv {
-    height: 100vh;
-    display: flex;
-
-    .topic {
-        height: 100%;
-        width: 110px;
-        display: flex;
-        overflow: hidden;
-        transition: width 1s ease-in-out;
-
-        .cover {
-            width:110px;
-            height: 100vh;
-            flex-shrink: 0;
-            h1 {
-                position: relative;
-                top: 75vh;
-                font-size: 4rem;
-                margin: 0;
-                transform: rotate(-90deg);
-            }
-        }
-
-        section {
-            padding-top: 3rem;
-        }
-
-        .item {
-            margin-top: 1rem;
-            margin-left: 10px;
-            font-size: 1rem;
-            
-            .time {
-                margin-bottom: 0;
-            }
-
-
-            .description {
-                margin-top: 0.2rem;
-
-                p {
-                    white-space: nowrap;
-                }
-
-                .button {
-                    margin: 50px 0;
-                    padding: 15px;
-                    color: #014109;
-                    text-decoration: none;
-                    background-color: #cef4c9;
-                    border-radius: 5px;
-
-                    &:hover {
-                        background-color: #03a719;
-                        transition: background-color 0.2s ease-in-out;
-                    }
-                }
-            }
-        }
-
-        .project {
-            max-height: 60px;
-            overflow: hidden;
-            width: 40vw;
-            transition: max-height 1s ease-in-out;
-            padding: 1rem 0;
-            margin:0;
-
-            border-bottom: 2px solid #cef4c9;
-
-            .time {
-                height: 70px;
-            }
-
-            iframe {
-                width: 100%;
-                height: 40vh;
-            }
-
-            .description {
-                margin-top: 20px;
-            }
-
-            
-
-            &:hover {
-                max-height: 70vh;
-                transition: max-height 1s ease-in-out;
-            }
-        }
-
-        .freetime {
-            #images {
-                margin-top: 1rem;
-                width: 50vw;
-                height: 70vh;
-                overflow-y: scroll;
-                display: flex;
-                flex-flow: row;
-                img {
-                    height: 70vh;
-                    width: auto;
-                }
-            }
-        }
-
-        &:hover {
-            width: 40vw;
-            transition: width 1s ease-in-out;
-        }
-
-
-    }
-
-    #cases {
-        &:hover {
-            width: 50vw;
-        }
-    }
-
-    #hobby {
-        &:hover {
-            width: 62vw;
-        }
-    }
-}
-
-}
-
-
-@media only screen and (max-width:1250px) and (min-width: 1001px){
     #personal {
-        padding: 0 10px;
+        width: 300px;
+        height: 100vh;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        padding: 2rem;
+        
+        img {
+            width: 60%;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
     }
 
     #cv {
-        .topic {
-            width: 90px;
-            .cover {
-                width: 90px;
-            }
-        }
+        height: 100vh;
+        display: flex;
 
-        #cases {
-            .project:last-child {
-                max-height: 80px;
-                .time {
-                    height: 80px;
+        .topic {
+            height: 100%;
+            width: 110px;
+            display: flex;
+            overflow: hidden;
+            transition: width 1s ease-in-out;
+
+            .cover {
+                width:110px;
+                height: 100vh;
+                flex-shrink: 0;
+                h1 {
+                    position: relative;
+                    top: 75vh;
+                    font-size: 4rem;
+                    margin: 0;
+                    transform: rotate(-90deg);
                 }
+            }
+
+            section {
+                padding-top: 3rem;
+            }
+
+            .item {
+                margin-top: 1rem;
+                margin-left: 10px;
+                font-size: 1rem;
+                
+                .time {
+                    margin-bottom: 0;
+                }
+
+
+                .description {
+                    margin-top: 0.2rem;
+                    
+                    p {
+                        margin-bottom: 0.5rem;
+                    }
+                }
+            }
+
+            .project {
+                max-height: 70px;
+                overflow: hidden;
+                width: 40vw;
+                transition: max-height 1s ease-in-out;
+                padding: 0.5rem 0;
+                margin: 0;
+
+                border-top: 1px solid $main-color;
+
+                &:last-child {
+                    border-bottom: 1px solid $main-color;
+                }
+
+                .time {
+                    min-height: 60px;
+                }
+
+                iframe {
+                    width: 100%;
+                    height: 40vh;
+                }
+
+                .description {
+                    margin-top: 20px;
+                }
+
+                
 
                 &:hover {
                     max-height: 70vh;
@@ -284,41 +243,133 @@ li {
                 }
             }
 
+            .freetime {
+                width: 100%;
+                #images {
+                    margin-top: 1rem;
+                    margin-right: 1rem;
+                    width: 45vw;
+                    height: 70vh;
+                    overflow-y: scroll;
+                    display: flex;
+                    flex-flow: row;
+
+                    img {
+                        height: 70vh;
+                        width: auto;
+                    }
+                }
+            }
+
+            &:hover {
+                width: 40vw;
+                transition: width 1s ease-in-out;
+            }
+
+
+        }
+
+        #cases {
             &:hover {
                 width: 50vw;
+            }
+        }
+
+        #hobby {
+            &:hover {
+                width: 55vw;
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (min-width: 1000px) and (max-width:1250px){
+    body{
+        overflow: hidden;
+    }
+    #personal {
+        padding: 0 10px;
+        .info {
+            margin: 0 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+
+    #cv {
+        .topic {
+            width: 90px;
+            flex-shrink: 1;
+            .cover {
+                width: 90px;
+            }
+        }
+
+        #cases {
+            .project {
+                transition: max-height 1s ease-in-out;
+                width: 95%;
+                .time {
+                    height: fit-content;
+                }
+
+                .description, iframe {
+                    visibility: hidden;
+                }
+
+                &:hover {
+                    max-height: 70vh;
+                    transition: max-height 1s ease-in-out;
+                    .description, iframe {
+                        visibility: visible;
+                    }
+                }
+            }
+
+            .wide {
+                max-height: 100px;
+            }
+
+            &:hover {
+                width: 55vw;
             }
         }
     }
     
 }
 
-@media only screen and (max-width: 1000px) {
+@media all and (max-width: 1000px) {
     body {
+        width: 100%;
         display: block;
     }
 
     #personal {
-        width: 100vw;
+        width: 100%;
         display: flex;
 
         img {
-            width:20vw;
+            width:200px;
             height: auto;
+            margin: 0.5rem;
         }
 
         .info {
-            margin-top: 1rem;
-            margin-left: 2rem;
+            margin:2rem 1rem 1rem;
         }
     }
 
     #cv {
         display: block;
-        width: 100vw;
+        width: 100%;
 
         .topic {
             width: 100%;
-            padding-bottom: 1rem;
+            padding-bottom: 2rem;
             display: block;
             overflow: hidden;
 
@@ -326,6 +377,7 @@ li {
                 margin: 0 2rem;
                 h1 {
                     font-size: 3rem;
+                    margin: 1rem 0;
                 }
             }
         }
@@ -334,7 +386,9 @@ li {
     #school {
         section {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            gap: 1rem;
             margin: 0 2rem;
         }
     }
@@ -343,11 +397,12 @@ li {
         section {
             display: grid;
             margin: 0 2rem;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
+            gap: 1rem;
 
             .item:first-child {
-                grid-column: 1 / 3;
+                grid-column: 1 / 2;
             }
         }
     }
@@ -363,16 +418,28 @@ li {
             margin-bottom: 2rem;
             padding: 1rem 2rem;
 
-            .time span{
-                font-size: 2rem;
+            .time {
+                margin: 1rem 0;
+                span{
+                    font-size: 2rem;
+                }
             }
 
-            &:nth-child(odd) {
-                background-color: #0e5017;
+            &:nth-child(even) {
+                background-color: $background-color4;
             }
+
             iframe {
                 width: 100%;
                 height: 400px;
+            }
+
+            .description {
+                margin: 1rem 0;
+
+                p {
+                    margin: 0.5rem 0;
+                }
             }
         }
     }
@@ -395,6 +462,7 @@ li {
                 }
             
                 #images {
+                    margin-top: 1rem;
                     width: 100%;
                     height: 500px;
                     display: flex;
@@ -412,11 +480,14 @@ li {
 
 }
 
-@media only screen and (max-width: 760px) {
+@media all  and (min-width:601px) and (max-width: 760px) {
+}
+
+//@media only screen and (min-width: 50px) and (max-width: 600px) {
+@media all and (max-width: 600px){
     #personal {
         img {
             margin: 0.5rem;
-            border: 1px solid #fff;
             width: 200px;
             height: auto;
         }
@@ -426,39 +497,39 @@ li {
         }
     }
 
+    #cv {
+        .item {
+                .time{
+                    margin-bottom: 0;
+                }
+                .description {
+                    margin-top: 0;
+                }
+            }
+    }
+
     #school {
         section {
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto;
+            grid-template-columns: 1fr;
         }
     }
 
     #work {
         section {
-            grid-template-columns: 1fr 1fr ;
+            grid-template-columns: 1fr;
 
             .item:first-child {
-                grid-column: 1 / 2;
+                grid-column: 1/1;
             }
-        }
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    #school {
-        section {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    #work {
-        section {
-            grid-template-columns: 1fr;
         }
     }
 
     #cases {
         .project {
+            .time {
+                margin-bottom: 1rem;
+            }
+
             ul {
                 li {
                     .link-group {

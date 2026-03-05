@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Pia's Playground</title>
+    <meta name="viewport" content="width=device-width">
     <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
   </head>
   <body>
@@ -18,6 +19,9 @@
           Hey, ich bin Pia und interessiere mich für Webentwicklung, 
           momentan bin ich noch "in Ausbildung" und auf der suche 
           nach einem Praxissemester für mein Studium.
+        </p>
+        <p>
+
         </p>
       </div>
     </section>
@@ -39,6 +43,14 @@
             <p class="time"><span>Fachabitur</span>2014-2016</p>
             <p class="description">INI Berufskolleg <br> Fachabitur für Gestaltung</p>
           </div>
+          <div class="item">
+            <p class="time"><span>Ausbildung Mediendesign</span>20017-2019</p>
+            <p class="description">Bib International College<br>GTA - Geschtaltungs Technische Assistentin<br>Paderborn</p>
+          </div>
+          <div class="item">
+            <p class="time"><span>Medieninformatik</span>seit 2019</p>
+            <p class="description">Bachelor<br>Hochschule Düsseldorf<br>Düsseldorf</p>
+          </div>
         </section>
       </div>
       <div id="work" class="topic">
@@ -46,14 +58,6 @@
           <h1>Berufserfahrung</h1>
         </div>
         <section>
-          <div class="item">
-            <p class="time"><span>Ausbildung Mediendesign</span>20017-2019</p>
-            <p class="description">Bib International College <br>Paderborn</p>
-          </div>
-          <div class="item">
-            <p class="time"><span>Medieninformatik</span>seit 2019</p>
-            <p class="description">Bachelor<br>Hochschule Düsseldorf<br>Düsseldorf</p>
-          </div>
           <div class="item">
             <p class="time"><span>Mirevi</span>2019-2020</p>
             <p class="description">Studentische Hilfskraft<br> Mediendesign <br> Webentwicklung</p>
@@ -78,14 +82,6 @@
         </div>
         <section>
           <div class="project item">
-            <p class="time"><span>Queeres<br>Teppichkino</span>2025</p>
-            <iframe src="https://queeres-teppichkino.com/"></iframe>
-            <div class="description">
-              <p>HSD Projekt<br>Webseite für das Queere Teppich Kino der HSD</p>
-              <p class="tech">Nur Umsetzung mit: <br>Strapi, React, Typescript, SCSS</p>
-            </div>
-          </div>
-          <div class="project item">
             <p class="time"><span>Baumaschinen<br>Vermietung Sudahl</span>2019</p>
             <iframe src="https://baumaschinen-vermietung-sudahl.de/"></iframe>
             <div class="description">
@@ -93,14 +89,14 @@
               <p class="tech">Wordpress</p>
             </div>
           </div>
-          <div class="project item">
+          <div class="project item wide">
             <p class="time"><span>Planwerk 6<br>Projekte im Rahmen des Praktikums</span>2023</p>
-            <ul>
+            <ul class="description">
               <li><a href="https://www.castenow.de/" target="_blank">CASTENOW</a><p>Relaunch: Nur Farb und Layout anpassungen</p></li>
               <li>
                 <div class="link-group">
                   <a href="https://www.schmidtkord.de/" target="_blank">Schmidtkord</a>
-                  <a href="https://www.lbarchitekten.de/" target="_blank">Lücker Beckmann Architekten</a>
+                  <a href="https://www.lbarchitekten.de/" target="_blank" class="no-wrap">Lücker Beckmann Architekten</a>
                 </div>
                 <p>Neu aufsetzung mit Drupal, HTML, TWIG (PHP), JQuery, Javascript, Scss </p>
               </li>
@@ -109,8 +105,13 @@
                 <p>Neu aufsetzung mit Wordpress Theme (ohne CMS)</p>
               </li>
             </ul>
+          </div>
+          <div class="project item">
+            <p class="time"><span>Queeres<br>Teppichkino</span>2025</p>
+            <iframe src="https://queeres-teppichkino.com/"></iframe>
             <div class="description">
-              <p></p>
+              <p>HSD Projekt<br>Webseite für das Queere Teppich Kino der HSD</p>
+              <p class="tech">Nur Umsetzung mit: <br>Strapi, React, Typescript, SCSS</p>
             </div>
           </div>
         </section>

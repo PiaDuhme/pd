@@ -544,3 +544,43 @@ li {
     }
 }
 
+@media all and (max-width: 460px) {
+    #personal {
+        .info {
+            h1 {
+                font-weight: 500;
+            }
+        }
+    }
+    .time {
+        span {
+            font-weight: 500;
+        }
+    }
+    #cv {
+        .topic {
+            .cover {
+                margin: 0 1rem;
+                h1 {
+                    font-size: 2.5rem;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        #school, #work, #hobby {
+            section {
+                margin: 0 1rem;
+            }
+        }
+
+        #cases {
+            .project {
+                padding: 1rem 1rem;
+            }
+        }
+
+
+    }
+}
+
